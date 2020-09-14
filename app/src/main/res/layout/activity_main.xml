@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Tic-Tac-Toe"
+        android:textColor="@android:color/black"
+        android:textSize="70dp" />
+
+    <ImageView
+        android:layout_width="207dp"
+        android:layout_height="208dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="283dp"
+        android:background="@drawable/download" />
+
+    <Button
+        android:id="@+id/bp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="210dp"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif"
+        android:text="Play game"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/bi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="150dp"
+        android:background="@android:color/black"
+        android:text="Instructions"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/be"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/black"
+        android:text="Exit"
+        android:textColor="@android:color/background_light" />
+
+
+</RelativeLayout>
