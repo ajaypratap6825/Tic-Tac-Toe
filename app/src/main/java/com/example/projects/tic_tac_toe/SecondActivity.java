@@ -14,8 +14,7 @@ public class SecondActivity  extends AppCompatActivity implements View.OnClickLi
     boolean p1 = true;
     int rCount;
     int p1P, p2P;
-    TextView tp1;
-    TextView tp2;
+    TextView tp1, tp2, winner;
     int i,j;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,7 @@ public class SecondActivity  extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_second);
         tp1 = findViewById(R.id.tp1);
         tp2 = findViewById(R.id.tp2);
+        winner = findViewById(R.id.winner);
 
         for(i=0; i<3; i++) {
             for(j=0; j<3; j++){
@@ -98,23 +98,23 @@ public class SecondActivity  extends AppCompatActivity implements View.OnClickLi
     }
     public void p1Wins(){
         p1P++;
-        Toast.makeText(this,"Player 1 wins!!",Toast.LENGTH_SHORT).show();
+        winner.setText("Last Winner : Player 1");
         updatePoints();
         resetBoard();
     }
     public void p2Wins(){
         p2P++;
-        Toast.makeText(this,"Player 2 wins!!",Toast.LENGTH_SHORT).show();
+        winner.setText("Last Winner : Player 2");
         updatePoints();
         resetBoard();
     }
     public void draw(){
-        Toast.makeText(this,"Draw",Toast.LENGTH_SHORT).show();
+        winner.setText("Last Winner : Draw");
         resetBoard();
     }
     public void updatePoints(){
-        tp1.setText("Player 1:" + p1P);
-        tp2.setText("Player 2:" + p2P);
+        tp1.setText("Player 1: " + p1P);
+        tp2.setText("Player 2: " + p2P);
     }
     public void resetBoard(){
         for(i=0; i<3; i++) {
@@ -124,6 +124,7 @@ public class SecondActivity  extends AppCompatActivity implements View.OnClickLi
         }
         rCount=0;
         p1=true;
+        Toast.makeText(this, "Score board is updated", Toast.LENGTH_SHORT).show();
     }
     public void reset(){
         p1P=0;

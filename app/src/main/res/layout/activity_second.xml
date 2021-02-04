@@ -4,18 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/image">
+    android:background="@drawable/image"
+    android:padding="10dp">
     
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp">
 
         <TextView
             android:id="@+id/tp1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="270dp"
             android:text="Player 1: 0"
             android:textColor="@android:color/black"
             android:textSize="30sp" />
@@ -24,10 +25,8 @@
             android:id="@+id/tp2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="270dp"
             android:text="Player 2: 0"
+            android:layout_below="@id/tp1"
             android:textColor="@android:color/black"
             android:textSize="30sp" />
 
@@ -35,122 +34,136 @@
             android:id="@+id/br"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="20dp"
             android:text="Reset"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tp2"
+            android:text="Last Winner :"
+            android:id="@+id/winner"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="75dp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
 
         <Button
             android:id="@+id/b_00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="45dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="1dp"
-            android:layout_toStartOf="@+id/b_01"
+            android:layout_marginStart="15dp"
             android:freezesText="true"
-            android:textSize="30sp" />
+            android:textSize="30sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@id/b_00"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="210dp"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@id/b_00"
+            android:layout_marginStart="10dp"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="210dp"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@id/b_01"
+            android:layout_marginStart="10dp"/>
 
         <Button
             android:id="@+id/b_01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="1dp"
-            android:layout_toStartOf="@+id/b_02"
+            android:layout_alignBottom="@id/b_00"
+            android:layout_toRightOf="@id/b_00"
+            android:layout_marginStart="20dp"
             android:freezesText="true"
-            android:textSize="30sp" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/b_02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="45dp"
-            android:layout_marginBottom="1dp"
+            android:layout_alignBottom="@id/b_00"
+            android:layout_toRightOf="@id/b_11"
+            android:layout_marginStart="20dp"
             android:freezesText="true"
             android:textSize="30sp" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp">
 
          <Button
             android:id="@+id/b_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="45dp"
-             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="1dp"
-            android:layout_toStartOf="@+id/b_11"
             android:freezesText="true"
-            android:textSize="30sp" />
+             android:layout_marginStart="15dp"
+            android:textSize="30sp"
+             android:layout_marginTop="15dp"
+             android:layout_below="@id/b_00"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@id/b_10"
+            android:layout_marginTop="10dp"/>
 
          <Button
             android:id="@+id/b_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="1dp"
-            android:layout_toStartOf="@+id/b_12"
-            android:freezesText="true"
+             android:layout_alignBottom="@id/b_10"
+             android:layout_toRightOf="@id/b_10"
+             android:layout_marginStart="20dp"
+             android:freezesText="true"
             android:textSize="30sp" />
 
          <Button
             android:id="@+id/b_12"
             android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="45dp"
-            android:layout_marginBottom="1dp"
-            android:freezesText="true"
+             android:layout_alignBottom="@id/b_10"
+             android:layout_toRightOf="@id/b_11"
+             android:layout_marginStart="20dp"
+             android:freezesText="true"
             android:textSize="30sp" />
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp">
 
         <Button
             android:id="@+id/b_20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="45dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="1dp"
-            android:layout_toStartOf="@+id/b_21"
             android:freezesText="true"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/b_10"/>
+
 
         <Button
             android:id="@+id/b_21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="1dp"
-            android:layout_toStartOf="@+id/b_22"
+            android:layout_alignBottom="@id/b_20"
+            android:layout_toRightOf="@id/b_20"
+            android:layout_marginStart="20dp"
             android:freezesText="true"
             android:textSize="30sp" />
 
@@ -158,10 +171,9 @@
             android:id="@+id/b_22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="45dp"
-            android:layout_marginBottom="1dp"
+            android:layout_alignBottom="@id/b_20"
+            android:layout_toRightOf="@id/b_21"
+            android:layout_marginStart="20dp"
             android:freezesText="true"
             android:textSize="30sp" />
 

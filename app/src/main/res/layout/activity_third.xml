@@ -3,23 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image">
+    android:background="@drawable/image"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/head"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="?android:attr/colorForeground"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:text="  Rules of Tic-Tac-Toe"
-        android:textColor="@android:color/background_light"
-        android:textSize="20dp" />
+        android:text="Rules of Tic-Tac-Toe"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="394dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+        android:layout_marginTop="10dp"
         android:gravity="center_vertical"
         android:text="@string/rules"
         android:textColor="@android:color/black"
